@@ -16,8 +16,16 @@ public class Projecttaile : MonoBehaviour
            gameObject.SetActive(false);
        }
     }
+
+    IEnumerator  DelatProjecttaile()
+    {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
+
+    }
     void Update()
     {
         transform.Translate(Vector2.up * _speed * Time.deltaTime);
+        StartCoroutine(DelatProjecttaile());
     }
 }
