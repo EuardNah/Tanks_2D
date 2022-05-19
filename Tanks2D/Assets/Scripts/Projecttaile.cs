@@ -17,7 +17,7 @@ public class Projecttaile : MonoBehaviour
        }
     }
 
-    IEnumerator  DelatProjecttaile()
+    IEnumerator  DeleteProjecttaile()
     {
         yield return new WaitForSeconds(1.5f);
         gameObject.SetActive(false);
@@ -26,6 +26,6 @@ public class Projecttaile : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.up * _speed * Time.deltaTime);
-        StartCoroutine(DelatProjecttaile());
+        StartCoroutine(DeleteProjecttaile());
     }
 }
